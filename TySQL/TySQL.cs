@@ -203,7 +203,7 @@ namespace TySQL
         /// </summary>
         public int Execute()
         {
-            Connection.Open();
+            Connection.Open(ConnectionString);
             int s = 0;
             using (SqlCommand comm = new SqlCommand(Query, Connection.GetSQLConnection()))
             {
